@@ -1,6 +1,6 @@
 pipeline {
 	environment {
-    registry = "snikhil1998/my-calculator"
+    registry = "nickpappu/mycalculator"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
@@ -38,6 +38,8 @@ pipeline {
             script {
               docker.withRegistry( '', registryCredential ) {
                 dockerImage.push()
+		latest = "docker push " + registry
+		sh latest
               }
             }
           }
