@@ -28,5 +28,14 @@ public class CalculatorTests {
         long result = calculator.subtract(a, b);
         Assert.assertEquals(expectedResult, result);;
     }
+
+    @Test
+    public void testMultiply() {
+        int a = 10;
+        int b = 25;
+        long expectedResult = 250;
+        long result = calculator.multiply(a, b);
+        Assert.assertEquals(expectedResult, result);;
+    }
     
 }
