@@ -38,6 +38,7 @@ pipeline {
             script {
               docker.withRegistry( '', registryCredential ) {
                 dockerImage.push()
+                lat_tag = "docker tag " + ":$BUILD_NUMBER" + registry
 		latest = "docker push " + registry
 		sh latest
               }
