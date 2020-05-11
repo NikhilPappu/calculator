@@ -2,7 +2,7 @@ package com.calculator;
 
 public class Calculator {
 
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		System.out.println("6 + 3 = " + add(6, 3));
 	}
 
